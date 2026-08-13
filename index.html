@@ -111,10 +111,10 @@
 
 <style>
 :root{
-  --marble: #EDE8DC;
-  --marble-dim: #DFD6C3;
-  --stone: #4B4E48;
-  --ink: #262622;
+  --marble: #DFE4E3;
+  --marble-dim: #C9D2D1;
+  --stone: #454F4E;
+  --ink: #20262A;
   --sky: #7A8FB8;
   --sky-deep: #4F6488;
   --sky-pale: #B7C3DC;
@@ -123,7 +123,7 @@
   --patina-deep: #2E3B33;
   --bronze: #8C9186;
   --gold: #A98F55;
-  --rule: rgba(38,38,34,0.16);
+  --rule: rgba(32,38,42,0.16);
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -140,10 +140,36 @@ body{
 .texture{
   position:fixed; inset:0; pointer-events:none; z-index:0; opacity:0.5;
   background-image:
-    radial-gradient(ellipse at 20% 10%, rgba(122,150,170,0.10), transparent 45%),
-    radial-gradient(ellipse at 85% 30%, rgba(169,146,94,0.08), transparent 40%),
-    repeating-linear-gradient(115deg, rgba(42,39,35,0.015) 0px, rgba(42,39,35,0.015) 1px, transparent 1px, transparent 3px);
+    radial-gradient(ellipse at 20% 10%, rgba(122,150,170,0.14), transparent 45%),
+    radial-gradient(ellipse at 85% 30%, rgba(107,132,120,0.09), transparent 40%),
+    repeating-linear-gradient(115deg, rgba(32,38,42,0.02) 0px, rgba(32,38,42,0.02) 1px, transparent 1px, transparent 3px);
 }
+
+.timeline-strip{
+  margin:8px 0 44px; overflow-x:auto; padding-bottom:8px;
+}
+.timeline-track{
+  position:relative; display:flex; gap:0; min-width:920px; padding-top:6px;
+}
+.timeline-track::before{
+  content:''; position:absolute; left:0; right:0; top:15px; height:2px;
+  background:linear-gradient(90deg, var(--patina-dark), var(--sky-deep), var(--gold));
+  opacity:0.5;
+}
+.tl-point{ flex:1; position:relative; text-align:center; padding:0 4px; }
+.tl-dot{
+  width:9px; height:9px; border-radius:50%; background:var(--patina-dark);
+  border:2px solid var(--marble); margin:11px auto 10px; position:relative; z-index:1;
+}
+.tl-year{
+  font-family:'Cormorant SC', serif; font-size:11px; letter-spacing:0.04em;
+  color:var(--patina-dark); font-weight:600;
+}
+.tl-label{
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-size:12.5px;
+  color:var(--stone); margin-top:2px; line-height:1.25; max-width:110px; margin-left:auto; margin-right:auto;
+}
+@media (max-width:640px){ .timeline-strip{margin-bottom:32px;} }
 
 .wrap{position:relative; z-index:1; max-width:760px; margin:0 auto; padding:0 28px;}
 
@@ -288,12 +314,12 @@ blockquote cite{
   padding-bottom:14px; border-bottom:1px dotted var(--rule);
 }
 .source-item .src-name{ font-weight:600; color:var(--stone); display:block; margin-bottom:2px; font-family:'Cormorant Garamond', serif; font-size:1.02rem;}
-.source-item .src-note{ color:#655F55; font-size:0.87rem; }
+.source-item .src-note{ color:#59615F; font-size:0.87rem; }
 @media (max-width:640px){ .sources{columns:1;} }
 
 /* CALLOUT */
 .callout{
-  background:linear-gradient(155deg, rgba(127,163,190,0.10), rgba(169,146,94,0.07));
+  background:linear-gradient(155deg, rgba(127,163,190,0.14), rgba(107,132,120,0.10));
   border:1px solid var(--rule);
   border-radius:2px;
   padding:26px 28px;
@@ -394,12 +420,31 @@ footer a{color:var(--patina-dark);}
   <p>This is a history of that choice, told through documented law, documented councils, and documented trials — not through the claim that a single hidden hand runs everything. The record is stranger and more specific than that, and it doesn't need embellishing.</p>
 </section>
 
+<div class="timeline-strip" role="img" aria-label="Timeline from 302 CE Diocletian's edict against the Manichaeans to 1966 the Index Librorum Prohibitorum's abolition">
+  <div class="timeline-track">
+    <div class="tl-point"><div class="tl-dot"></div><div class="tl-year">302</div><div class="tl-label">Diocletian bans the Manichaeans</div></div>
+    <div class="tl-point"><div class="tl-dot"></div><div class="tl-year">367</div><div class="tl-label">Athanasius's canon letter</div></div>
+    <div class="tl-point"><div class="tl-dot"></div><div class="tl-year">385</div><div class="tl-label">Priscillian executed</div></div>
+    <div class="tl-point"><div class="tl-dot"></div><div class="tl-year">438</div><div class="tl-label">Theodosian Code</div></div>
+    <div class="tl-point"><div class="tl-dot"></div><div class="tl-year">529</div><div class="tl-label">Athenian Academy closed</div></div>
+    <div class="tl-point"><div class="tl-dot"></div><div class="tl-year">553</div><div class="tl-label">Origen condemned</div></div>
+    <div class="tl-point"><div class="tl-dot"></div><div class="tl-year">1209</div><div class="tl-label">Albigensian Crusade</div></div>
+    <div class="tl-point"><div class="tl-dot"></div><div class="tl-year">1231</div><div class="tl-label">Papal Inquisition</div></div>
+    <div class="tl-point"><div class="tl-dot"></div><div class="tl-year">1559</div><div class="tl-label">Index Librorum Prohibitorum</div></div>
+    <div class="tl-point"><div class="tl-dot"></div><div class="tl-year">1600</div><div class="tl-label">Bruno burned</div></div>
+    <div class="tl-point"><div class="tl-dot"></div><div class="tl-year">1786</div><div class="tl-label">Virginia Statute</div></div>
+    <div class="tl-point"><div class="tl-dot"></div><div class="tl-year">1945</div><div class="tl-label">Nag Hammadi found</div></div>
+    <div class="tl-point"><div class="tl-dot"></div><div class="tl-year">1966</div><div class="tl-label">Index abolished</div></div>
+  </div>
+</div>
+
 <section class="block" id="pluralism">
   <div class="kicker">I. Before Orthodoxy Had a Name</div>
   <h2>A Genuinely Plural Beginning</h2>
   <p>For much of the second century, "Christianity" was not one thing. Communities across Alexandria, Antioch, Rome, and Edessa read different texts, told different stories about who Jesus was, and organized themselves without a shared central authority. The historian <strong>Walter Bauer</strong> argued in 1934 that what later became "orthodoxy" was not necessarily the earliest or most widespread form of the faith — in several regions, the traditions later branded heretical were the dominant local Christianity before being outcompeted, politically and institutionally, by the Roman-aligned church.</p>
   <p>Among these traditions were groups modern scholars group loosely under the term <strong>Gnostic</strong> — a label of convenience, not a term these groups used for themselves. Texts like the <em>Gospel of Thomas</em>, a collection of sayings attributed to Jesus with no birth narrative, no crucifixion, and no resurrection scene, circulated alongside what would become the canonical gospels. Whether any individual saying in it traces to the historical Jesus is genuinely disputed among scholars — some, following the "Q source" hypothesis, see it preserving very early material; others, like Mark Goodacre, argue it depends on and postdates the canonical gospels. Both positions are held by serious historians today.</p>
   <blockquote>"What we call heresies were sometimes, in certain regions, simply the earlier and majority form of the faith."<cite>Paraphrased from Walter Bauer, <em>Orthodoxy and Heresy in Earliest Christianity</em>, 1934</cite></blockquote>
+  <p>Gnostic-leaning groups weren't the only shape dissent took, either, which is worth noting because it shows the pattern wasn't only about cosmology. <strong>Montanism</strong>, emerging in Phrygia around 157 CE under a prophet named Montanus and two women prophets, Priscilla and Maximilla, claimed ongoing direct revelation through ecstatic prophecy — no dualist cosmology at all, just the much simpler and, to a consolidating church hierarchy, equally threatening claim that God was still speaking outside the control of bishops. It was formally condemned by a synod of Asia Minor bishops around 177 CE. The 2nd-century Christian writer Tertullian, notably, converted to Montanism late in life — a reminder that the line between "orthodox" and "heretic" ran through individual careers, not just between fixed camps.</p>
 </section>
 
 <section class="block" id="legal">
@@ -430,6 +475,20 @@ footer a{color:var(--patina-dark);}
       </div>
     </div>
     <div class="fragment">
+      <div class="frag-date">c. 373–383 CE</div>
+      <div class="frag-body">
+        <h4>Augustine's Manichaean Decade</h4>
+        <p>Before he was orthodoxy's most influential theologian, Augustine of Hippo spent roughly nine years as a Manichaean — a dualist faith, distinct from but often historically conflated with Gnosticism, that also held the material world to be a battleground between light and dark forces. His <em>Confessions</em> (Book 3–5, c. 397 CE) describes his eventual disillusionment and conversion to Nicene Christianity, after which he became the tradition's sharpest anti-Manichaean and anti-Donatist polemicist. It's a genuinely useful case for the "who decides orthodoxy" question this whole history keeps raising: the man who helped define what heresy meant for the next thousand years spent a decade of his own life inside a movement later law would have criminalized.</p>
+      </div>
+    </div>
+    <div class="fragment">
+      <div class="frag-date">311–411 CE</div>
+      <div class="frag-body">
+        <h4>The Donatist Controversy</h4>
+        <p>A North African dispute, not about cosmology at all but about whether clergy who had handed over scriptures during earlier Roman persecution could validly administer sacraments afterward. What makes it significant here: Augustine, arguing against the Donatists, became the first major Christian theologian to write a systematic justification for using state coercion against fellow Christians, citing Luke 14:23's "compel them to come in" — a text and an argument later cited directly by medieval inquisitors justifying force against the Cathars. The theological machinery for religious coercion, in other words, was built by the same figure canonized as a Doctor of the Church.</p>
+      </div>
+    </div>
+    <div class="fragment">
       <div class="frag-date">385 CE</div>
       <div class="frag-body">
         <h4>The Execution of Priscillian</h4>
@@ -450,7 +509,15 @@ footer a{color:var(--patina-dark);}
         <p>Justinian's legal compilation went further than Theodosius's, stripping unbaptized persons and heretics of the right to testify in court against orthodox citizens or hold public office — codified civil death. The same emperor's 529 CE decree shut down the last major institutional home of classical philosophical teaching in the Greek world, ending centuries of continuous instruction.</p>
       </div>
     </div>
+    <div class="fragment">
+      <div class="frag-date">553 CE</div>
+      <div class="frag-body">
+        <h4>Origen's Posthumous Condemnation</h4>
+        <p>The Second Council of Constantinople anathematized the theologian Origen of Alexandria — dead for nearly three centuries by that point — for teaching positions including the pre-existence of souls and a form of universal salvation. Origen had been, in his lifetime, one of the church's most prolific and respected biblical scholars; the delay between his death and his condemnation shows orthodoxy wasn't a fixed line but a boundary still being actively redrawn centuries into Christian history, sometimes retroactively.</p>
+      </div>
+    </div>
   </div>
+  <p>Between Augustine's Manichaean years and his later justification of coercion, and Origen's centuries-delayed condemnation, a pattern worth sitting with emerges: the line separating orthodoxy from heresy wasn't fixed at any single moment, and the people who eventually enforced it had sometimes stood on the other side of it themselves.</p>
   <p>None of this required a conspiracy. It required a state church with the power to write law, and it used that power the way most institutions use durable power: to entrench itself and remove competitors. Historian Elaine Pagels made the more specific case in <em>The Gnostic Gospels</em> (1979) that the fight was as much about organizational structure as doctrine — Gnostic communities in some cases operated with rotating leadership and no fixed priesthood, which was simply incompatible with a church trying to consolidate around bishops.</p>
   <p>A counter-argument worth taking seriously: historian Peter Brown has cautioned against reading the Theodosian Code as evidence of efficient, pervasive enforcement. Ancient states had limited administrative reach — laws could sit on the books largely unenforced outside a few high-profile cases, and Brown's <em>Power and Persuasion in Late Antiquity</em> (1992) argues local bishops often had more practical influence over a community's beliefs than distant imperial edicts did. The law existed. How consistently it was actually applied on the ground, versus invoked selectively against inconvenient rivals, is a separate and less settled question.</p>
 </section>
@@ -521,6 +588,8 @@ footer a{color:var(--patina-dark);}
   <p>Jefferson's <strong>Virginia Statute for Religious Freedom</strong> (drafted 1777, enacted 1786) was the direct template for the First Amendment's religion clauses. In it, Jefferson wrote that compelling a person to support opinions they disbelieve is "sinful and tyrannical," and that civil rights should have no dependence on religious opinion any more than on opinions in physics or geometry. He considered this achievement significant enough to have it listed, alongside authoring the Declaration of Independence, on his own gravestone — he left the presidency off the list.</p>
   <p>Jefferson also famously took a razor to the New Testament, physically cutting out the miracle accounts and the resurrection to leave only Jesus's ethical teaching — a project he called, in private letters, an attempt to separate "diamonds" from a "dunghill" of later additions by what he saw as self-interested clergy. It's worth being precise here: Jefferson was a theist who believed in a rational, non-intervening creator (a position historians call Deism), not a Gnostic in the ancient sense — he had no access to Nag Hammadi, discovered more than a century after his death, and he did not believe the material world was a flawed trap. What he shared with the older suppressed traditions was narrower and more specific: a conviction that institutional religious authority should never again have the power of the state behind it.</p>
   <p>Jefferson and Madison were not working from a blank slate philosophically, either. Both drew directly on <strong>John Locke's</strong> <em>A Letter Concerning Toleration</em> (1689), written in the wake of England's own religious civil wars, which argued that civil government has no legitimate authority over "the salvation of souls" because belief cannot be compelled by force in any case — a coerced confession is worthless as genuine faith. And the colonies already had a working domestic precedent: Roger Williams's Rhode Island colony, founded in 1636 explicitly on the principle of a "wall of separation" between civil and religious authority (Williams's own phrase, which Jefferson borrowed verbatim in his 1802 letter to the Danbury Baptists), after Williams himself had been banished from Massachusetts Bay for religious dissent. The Founders weren't reasoning about persecution in the abstract — they had a domestic case study a century and a half old.</p>
+  <p>Williams's actual argument survives in detail because he fought it out in print. His <em>The Bloudy Tenent of Persecution</em> (1644) was written as a direct response to Massachusetts minister John Cotton, who had defended the colony's authority to banish and punish religious dissenters on the grounds that a godly commonwealth had a duty to protect itself from corruption — essentially a Protestant American restatement of the same "compel them to come in" logic Augustine had used against the Donatists thirteen centuries earlier. Cotton wrote back (<em>The Bloudy Tenent, Washed and Made White</em>, 1647); Williams answered again. The exchange is one of the few places in this entire history where both the persecutor's argument and the dissenter's rebuttal survive in full and in the dissenter's own words, rather than only through a hostile source's summary.</p>
+  <p>Madison's fingerprints on institutional religious liberty predate the First Amendment by two years. At the 1787 Constitutional Convention, he supported what became <strong>Article VI</strong> of the Constitution, which states that no religious test shall ever be required as a qualification for any federal office — a narrower but more immediately binding provision than the First Amendment, since it applied the moment the Constitution was ratified in 1788, before the Bill of Rights existed at all.</p>
   <div class="callout">
     <div class="kicker">Worth noting</div>
     <p>Many prominent Founders — Washington, Franklin, Revere, Hancock — were Freemasons, and Enlightenment-era Freemasonry's higher degrees did draw on Hermetic and Kabbalistic symbolism inherited via the Renaissance. But there's a real gap between "used shared esoteric vocabulary" and "secretly practiced ancient Gnosticism," and the historical record supports only the former. It's a case where the more modest claim is also the more interesting one: these were Enlightenment rationalists building civic institutions, using old architectural metaphors, not a hidden mystery cult running the republic.</p>
@@ -559,8 +628,31 @@ footer a{color:var(--patina-dark);}
   <p class="lede">That's a more interesting claim than a conspiracy, not a less interesting one. It suggests something about how human institutions behave under centralized pressure — repeatedly, in unconnected times and places — rather than about one hidden group pulling one long thread.</p>
 </section>
 
+<section class="block" id="echoes">
+  <div class="kicker">VII. A Few Lenses Worth Trying On</div>
+  <h2>Modern Thinkers Who Picked Up the Same Shape</h2>
+  <p>None of what follows is offered as continuity — there's no evidence these later thinkers were consciously extending an ancient lineage, and the honest scholarly position, argued above, is independent recurrence rather than transmission. But the shape keeps showing up in serious, citable work, and it's worth trying each lens on rather than deciding in advance whether it fits.</p>
+
+  <h3>Carl Jung: the myth as a map of the mind, not the cosmos</h3>
+  <p>Jung read Gnostic cosmology not as a claim about the physical universe but as an externalized diagram of the individuation process — the Archons as personifications of psychological complexes standing between a person and self-knowledge, the Pleroma as a symbol for psychic wholeness rather than a place. His <em>Seven Sermons to the Dead</em> (1916) and the posthumously published <em>Red Book</em> read like Jung generating his own Gnostic-style cosmology from active imagination. Whether this tells you something true about the human mind, or simply tells you that one influential 20th-century psychologist found the vocabulary useful, is a judgment call worth making for yourself rather than accepting on authority — his own or anyone else's.</p>
+
+  <h3>Eric Voegelin: when "gnosis" becomes a political diagnosis</h3>
+  <p>Voegelin's <em>Science, Politics, and Gnosticism</em> (1968) argued that modern mass ideological movements — he had fascism and Marxism specifically in mind — reenact a Gnostic structure: a conviction that ordinary reality is fundamentally corrupt, that a small group possesses the special knowledge needed to fix it, and that fixing it justifies overriding ordinary constraints. It's a provocative comparison and a contested one — critics point out that stretching "Gnostic" to cover any totalizing political movement risks making the word mean everything and therefore nothing. Worth reading Voegelin directly rather than secondhand, and worth asking where the analogy holds and where it's being asked to do too much work.</p>
+
+  <h3>Jacques Ellul: technique as an environment nobody voted for</h3>
+  <p>Ellul's <em>The Technological Society</em> (1954) isn't about religion at all — it's a sociological argument that modern life is organized around <em>la technique</em>, the relentless pursuit of the most efficient method, which becomes self-perpetuating and unaccountable to the individuals living inside it. Ellul was a practicing Christian theologian as well as a sociologist, and he was aware of the structural resemblance between his argument and older anti-cosmic religious critique — a system that nobody designed with malice, that nonetheless behaves as though it has its own interests. Reading Ellul next to Irenaeus's ancient opponents is an exercise in analogy, not evidence of shared origin, but the analogy earns its keep: it gives you a vocabulary for describing institutional behavior that doesn't require assuming anyone is a villain.</p>
+
+  <h3>Jean Baudrillard: the map that replaces the territory</h3>
+  <p>Baudrillard's <em>Simulacra and Simulation</em> (1981) argues that mediated, mass-produced representations of reality can become more determinative of people's lives than the underlying reality itself — the map doesn't just represent the territory, it replaces it. This is a claim about media and semiotics, not theology, and Baudrillard wasn't working from Gnostic sources. The resemblance to older "the visible world is a screen over the real one" language is a case where a real 20th-century French theorist arrived, independently and through entirely different intellectual roads, at a structurally similar diagnosis of how a managed representation of reality can substitute for direct contact with it.</p>
+
+  <div class="callout">
+    <div class="kicker">How to use this section</div>
+    <p>The point of laying these four out together isn't to claim they're all saying the same thing, or that one hidden truth connects a 2nd-century Egyptian sect to a 20th-century French sociologist. It's to notice that "the visible authority isn't the real authority, and the ordinary person is meant to stay unaware of that" is a genuinely recurring diagnostic shape across very different fields, centuries, and starting assumptions — and to let you decide for yourself whether that recurrence is meaningful, coincidental, or just what pattern-seeking minds do with enough historical distance. All four are real, citable, disagreed-about arguments. None of them are settled, and neither is the question of whether they belong in the same conversation at all.</p>
+  </div>
+</section>
+
 <section class="block" id="questions">
-  <div class="kicker">VII. Open Rather Than Closed</div>
+  <div class="kicker">VIII. Open Rather Than Closed</div>
   <h2>Questions Worth Sitting With</h2>
   <p>A few threads this history leaves genuinely open, rather than settled:</p>
   <p><strong>Why does the pattern recur?</strong> Bogomils in Byzantium, Cathars in Languedoc, and Gnostics in Roman Egypt shared no confirmed direct contact, yet arrived at structurally similar critiques of centralized religious authority. Is that convergent reasoning under similar institutional pressure, or does it say something about a genuine tension built into any sufficiently centralized system of belief?</p>
@@ -588,6 +680,11 @@ footer a{color:var(--patina-dark);}
   <h2>Sources</h2>
   <p class="lede">Organized by what each source is actually being used to support, so the argument stays checkable claim by claim rather than as one undifferentiated pile.</p>
 
+  <div class="callout">
+    <div class="kicker">Where to start</div>
+    <p><strong>New to this topic:</strong> Elaine Pagels's <em>The Gnostic Gospels</em> (1979) remains the most readable general-audience entry point — short, narrative, and it started the modern popular conversation. Bart Ehrman's <em>Lost Christianities</em> (2003) is the best single accessible survey of the wider pluralism question. <strong>Ready to go primary:</strong> Marvin Meyer's <em>The Nag Hammadi Scriptures</em> (2007) is the most readable modern translation of the actual ancient texts, with helpful introductions. <strong>For the historiographical arguments themselves:</strong> everything below in "Where Historians Actually Disagree" and the specialist categories — denser, but where the real scholarly disputes actually live, footnotes and all.</p>
+  </div>
+
   <h3>Primary Legal &amp; Historical Documents</h3>
   <div class="sources">
     <div class="source-item"><span class="src-name">Codex Theodosianus, Book 16</span><span class="src-note">Trans. Clyde Pharr, The Theodosian Code (1952)</span></div>
@@ -599,6 +696,10 @@ footer a{color:var(--patina-dark);}
     <div class="source-item"><span class="src-name">Thomas Jefferson</span><span class="src-note">The Jefferson Bible (compiled c. 1820); Letter to the Danbury Baptists, 1802</span></div>
     <div class="source-item"><span class="src-name">John Locke</span><span class="src-note">A Letter Concerning Toleration (1689)</span></div>
     <div class="source-item"><span class="src-name">Roger Williams</span><span class="src-note">The Bloudy Tenent of Persecution (1644)</span></div>
+    <div class="source-item"><span class="src-name">John Cotton</span><span class="src-note">The Bloudy Tenent, Washed and Made White in the Bloud of the Lambe (1647)</span></div>
+    <div class="source-item"><span class="src-name">U.S. Constitution</span><span class="src-note">Article VI, Clause 3 (1788) — the "no religious test" clause, predating the Bill of Rights</span></div>
+    <div class="source-item"><span class="src-name">Augustine of Hippo</span><span class="src-note">Confessions, Books 3–5 (c. 397 CE); Letter 93 to Vincentius, on coercing the Donatists</span></div>
+    <div class="source-item"><span class="src-name">Second Council of Constantinople</span><span class="src-note">Anathemas against Origen, 553 CE</span></div>
   </div>
 
   <h3>On the Nag Hammadi Texts &amp; Early Christian Pluralism</h3>
@@ -641,6 +742,14 @@ footer a{color:var(--patina-dark);}
     <div class="source-item"><span class="src-name">Karen L. King</span><span class="src-note">What Is Gnosticism? (2003)</span></div>
     <div class="source-item"><span class="src-name">Michael Allen Williams</span><span class="src-note">Rethinking "Gnosticism": An Argument for Dismantling a Dubious Category (1996)</span></div>
     <div class="source-item"><span class="src-name">Alastair H.B. Logan</span><span class="src-note">The Gnostics: Identifying an Early Christian Cult (2006)</span></div>
+  </div>
+
+  <h3>Modern Lenses (Offered as Analogy, Not Lineage)</h3>
+  <div class="sources">
+    <div class="source-item"><span class="src-name">Carl Jung</span><span class="src-note">Seven Sermons to the Dead (1916); The Red Book: Liber Novus (written c. 1914–1930, published 2009)</span></div>
+    <div class="source-item"><span class="src-name">Eric Voegelin</span><span class="src-note">Science, Politics, and Gnosticism (1968)</span></div>
+    <div class="source-item"><span class="src-name">Jacques Ellul</span><span class="src-note">The Technological Society (1954; Eng. trans. 1964)</span></div>
+    <div class="source-item"><span class="src-name">Jean Baudrillard</span><span class="src-note">Simulacra and Simulation (1981; Eng. trans. 1994)</span></div>
   </div>
 </section>
 
