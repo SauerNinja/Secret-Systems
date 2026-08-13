@@ -1,0 +1,16 @@
+{
+  "name": "Secret Systems: The Historical Suppression of Gnostic Thought",
+  "short_name": "Secret Systems",
+  "description": "A sourced history of Gnostic suppression and the live scholarly debates historians still haven't resolved.",
+  "start_url": "https://sauerninja.github.io/Secret-Systems/",
+  "scope": "https://sauerninja.github.io/Secret-Systems/",
+  "display": "browser",
+  "background_color": "#DFE4E3",
+  "theme_color": "#47594E",
+  "lang": "en",
+  "icons": [
+    { "src": "favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "favicon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
