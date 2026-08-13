@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Secret Systems: The Historical Suppression of Gnostic Thought</title>
-<meta name="description" content="A sourced history of Gnostic suppression — and the live scholarly debates historians still haven't resolved. Nag Hammadi, the Theodosian Code, the Cathars, Walter Bauer's thesis, and why the Founders built the First Amendment as a direct answer to this history.">
+<meta name="description" content="A sourced history of Gnostic suppression, drawing on Pagels, Bauer, Jonas, Moore, Lambert, and the Theodosian Code itself — with the live scholarly debates historians still haven't resolved, and why the Founders built the First Amendment as a direct answer to this history.">
 <meta name="keywords" content="Gnosticism, Nag Hammadi, Gospel of Thomas, Theodosian Code, Cathars, Albigensian Crusade, Index Librorum Prohibitorum, Giordano Bruno, First Amendment history, Virginia Statute for Religious Freedom, Elaine Pagels, Walter Bauer, Hans Jonas, Karen King, April DeConick, R.I. Moore, Bart Ehrman">
 <meta name="author" content="Setvin Noether">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#4E7288">
+<meta name="theme-color" content="#47594E">
 <link rel="canonical" href="https://sauerninja.github.io/Secret-Systems/">
 
 <meta property="og:type" content="article">
@@ -111,16 +111,19 @@
 
 <style>
 :root{
-  --marble: #ECE7DB;
-  --marble-dim: #DDD5C4;
-  --stone: #4A4640;
-  --ink: #2A2723;
-  --sky: #7FA3BE;
-  --sky-deep: #4E7288;
-  --patina: #5C7A6C;
-  --patina-dark: #3E5A4E;
-  --gold: #A9925E;
-  --rule: rgba(42,39,35,0.18);
+  --marble: #EDE8DC;
+  --marble-dim: #DFD6C3;
+  --stone: #4B4E48;
+  --ink: #262622;
+  --sky: #7A8FB8;
+  --sky-deep: #4F6488;
+  --sky-pale: #B7C3DC;
+  --patina: #6B8478;
+  --patina-dark: #47594E;
+  --patina-deep: #2E3B33;
+  --bronze: #8C9186;
+  --gold: #A98F55;
+  --rule: rgba(38,38,34,0.16);
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -173,7 +176,7 @@ h1.hero-title{
   font-weight:600;
   font-size:clamp(2.6rem, 7vw, 4.6rem);
   line-height:1.03;
-  color:#F4EFE3;
+  color:#F2ECDD;
   margin:18px 0 14px;
   max-width:9.5em;
   text-shadow:0 2px 24px rgba(0,0,0,0.3);
@@ -277,7 +280,7 @@ blockquote cite{
 
 /* TWO COLUMN SOURCE LIST */
 .sources{
-  columns:2; column-gap:36px; margin-top:10px;
+  columns:2; column-gap:36px; margin-top:10px; margin-bottom:8px;
 }
 .sources .src-col-break{break-before:column;}
 .source-item{
@@ -327,10 +330,11 @@ blockquote cite{
 
 /* DIVIDER GLYPH */
 .glyph-divider{
-  display:flex; align-items:center; justify-content:center; gap:16px;
+  display:flex; align-items:center; justify-content:center; gap:14px;
   margin:8px 0 36px; color:var(--gold);
 }
-.glyph-divider .line{height:1px; width:80px; background:var(--rule);}
+.glyph-divider svg{width:34px; height:20px; fill:none; stroke:var(--gold); stroke-width:1.4;}
+.glyph-divider .line{height:1px; width:70px; background:var(--rule);}
 
 /* CONSENT / FOOTER */
 .consent-banner{
@@ -402,7 +406,15 @@ footer a{color:var(--patina-dark);}
   <div class="kicker">II. When Theology Became Statute</div>
   <h2>The Machinery of Imperial Law</h2>
   <p>The turning point was not a theological debate. It was a legal one. After the Council of Nicaea in 325 CE brought Christianity into alignment with the Roman state, and especially after Emperor Theodosius I made Nicene Christianity the empire's official religion in 380 CE, doctrinal disagreement stopped being a matter of persuasion and became a matter of law.</p>
+  <p class="lede">The legal machinery didn't start with Christian emperors, either — it started with a pagan one, which complicates any story about this being purely a Christian innovation.</p>
   <div class="fragments">
+    <div class="fragment">
+      <div class="frag-date">302 CE</div>
+      <div class="frag-body">
+        <h4>Diocletian's Edict Against the Manichaeans</h4>
+        <p>Predating Constantine's conversion by decades, Emperor Diocletian — a persecutor of Christians himself — issued the empire's first known legal edict targeting a specific religious minority for its foreign origin and teachings, ordering Manichaean leaders and their books burned. The precedent (foreign teaching = legal threat) was pagan Roman before it was ever Christian. Text preserved in the <em>Collatio Legum Mosaicarum et Romanarum</em>, 15.3.</p>
+      </div>
+    </div>
     <div class="fragment">
       <div class="frag-date">367 CE</div>
       <div class="frag-body">
@@ -418,6 +430,13 @@ footer a{color:var(--patina-dark);}
       </div>
     </div>
     <div class="fragment">
+      <div class="frag-date">385 CE</div>
+      <div class="frag-body">
+        <h4>The Execution of Priscillian</h4>
+        <p>A Spanish bishop whose ascetic teaching drew accusations of magic and Manichaeism, Priscillian was tried by a secular Roman court and beheaded at Trier — the first documented case of Christian authorities executing another Christian for heresy. Even contemporaries were uneasy about it: both Ambrose of Milan and Pope Siricius publicly objected to the involvement of secular courts in a doctrinal matter, which tells us the norm was not yet fully settled even among the orthodox.</p>
+      </div>
+    </div>
+    <div class="fragment">
       <div class="frag-date">438 CE</div>
       <div class="frag-body">
         <h4>Codex Theodosianus, Book 16</h4>
@@ -425,14 +444,15 @@ footer a{color:var(--patina-dark);}
       </div>
     </div>
     <div class="fragment">
-      <div class="frag-date">529 CE</div>
+      <div class="frag-date">529–534 CE</div>
       <div class="frag-body">
-        <h4>Closure of the Athenian Academy</h4>
-        <p>Emperor Justinian's decree shut down the last major institutional home of classical philosophical teaching in the Greek world, ending centuries of continuous instruction.</p>
+        <h4>Justinian's Codex and the Closure of the Athenian Academy</h4>
+        <p>Justinian's legal compilation went further than Theodosius's, stripping unbaptized persons and heretics of the right to testify in court against orthodox citizens or hold public office — codified civil death. The same emperor's 529 CE decree shut down the last major institutional home of classical philosophical teaching in the Greek world, ending centuries of continuous instruction.</p>
       </div>
     </div>
   </div>
   <p>None of this required a conspiracy. It required a state church with the power to write law, and it used that power the way most institutions use durable power: to entrench itself and remove competitors. Historian Elaine Pagels made the more specific case in <em>The Gnostic Gospels</em> (1979) that the fight was as much about organizational structure as doctrine — Gnostic communities in some cases operated with rotating leadership and no fixed priesthood, which was simply incompatible with a church trying to consolidate around bishops.</p>
+  <p>A counter-argument worth taking seriously: historian Peter Brown has cautioned against reading the Theodosian Code as evidence of efficient, pervasive enforcement. Ancient states had limited administrative reach — laws could sit on the books largely unenforced outside a few high-profile cases, and Brown's <em>Power and Persuasion in Late Antiquity</em> (1992) argues local bishops often had more practical influence over a community's beliefs than distant imperial edicts did. The law existed. How consistently it was actually applied on the ground, versus invoked selectively against inconvenient rivals, is a separate and less settled question.</p>
 </section>
 
 <section class="block" id="medieval">
@@ -448,10 +468,31 @@ footer a{color:var(--patina-dark);}
       </div>
     </div>
     <div class="fragment">
+      <div class="frag-date">1215 CE</div>
+      <div class="frag-body">
+        <h4>Fourth Lateran Council</h4>
+        <p>Convened by Innocent III, the council made annual private confession to a parish priest mandatory for all adult Christians (Canon 21) — a durable surveillance mechanism at the level of individual conscience, not just public behavior, that outlasted the Inquisition itself by centuries.</p>
+      </div>
+    </div>
+    <div class="fragment">
       <div class="frag-date">1231–1252</div>
       <div class="frag-body">
         <h4>The Permanent Papal Inquisition</h4>
         <p>Pope Gregory IX's bull <em>Ille Humani Generis</em> established standing tribunals staffed by trained Dominican inquisitors. Pope Innocent IV's 1252 bull <em>Ad Extirpanda</em> formally authorized torture in questioning.</p>
+      </div>
+    </div>
+    <div class="fragment">
+      <div class="frag-date">1179–1215 CE</div>
+      <div class="frag-body">
+        <h4>The Waldensians</h4>
+        <p>Founded by the Lyon merchant Peter Waldo, this movement is frequently confused with the Cathars in popular accounts, but historian Euan Cameron's <em>Waldenses</em> (2000) is emphatic that they were doctrinally orthodox on cosmology — no Demiurge, no dualism. Their actual offense was vernacular scripture translation and unlicensed lay preaching, including by women. They were excommunicated at the Third Lateran Council (1179) for insubordination, not heresy of belief, which is a meaningfully different charge that later polemic blurred.</p>
+      </div>
+    </div>
+    <div class="fragment">
+      <div class="frag-date">1478–1834 CE</div>
+      <div class="frag-body">
+        <h4>The Spanish Inquisition</h4>
+        <p>Distinct from the medieval papal Inquisition, this was a royal institution under Ferdinand and Isabella, initially targeting converted Jews (conversos) and Muslims (moriscos) suspected of secretly practicing their former faith. Historian Henry Kamen's revisionist <em>The Spanish Inquisition: A Historical Revision</em> (1997) argues its reputation for scale was later inflated by Protestant and Enlightenment polemicists — a genuinely contested historiographical point that cuts against the instinct to assume every account of persecution is understated rather than sometimes overstated.</p>
       </div>
     </div>
     <div class="fragment">
@@ -469,7 +510,7 @@ footer a{color:var(--patina-dark);}
       </div>
     </div>
   </div>
-  <p>The through-line across these events is not mysticism. It's what historian R.I. Moore called, in <em>The Formation of a Persecuting Society</em> (1987), the invention of durable bureaucratic tools for tracking and punishing dissent — record-keeping, denunciation networks, standing courts — built originally to find heretics and later repurposed by secular states for other kinds of political policing entirely.</p>
+  <p>The through-line across these events is not mysticism. It's what historian R.I. Moore called, in <em>The Formation of a Persecuting Society</em> (1987), the invention of durable bureaucratic tools for tracking and punishing dissent — record-keeping, denunciation networks, standing courts — built originally to find heretics and later repurposed by secular states for other kinds of political policing entirely. Moore's thesis is itself an argument, not a neutral fact: he's making a specific claim that persecution became structurally embedded in Western institutions around the 12th and 13th centuries, a claim other medievalists have contested on the grounds that it may understate persecution in earlier periods to make the medieval shift look sharper than it was.</p>
 </section>
 
 <section class="block" id="founders">
@@ -479,6 +520,7 @@ footer a{color:var(--patina-dark);}
   <blockquote>"Rulers who wished to subvert the public liberty may have found an established clergy convenient auxiliaries. A just government, instituted to secure and perpetuate it, needs them not."<cite>James Madison, Memorial and Remonstrance Against Religious Assessments, 1785</cite></blockquote>
   <p>Jefferson's <strong>Virginia Statute for Religious Freedom</strong> (drafted 1777, enacted 1786) was the direct template for the First Amendment's religion clauses. In it, Jefferson wrote that compelling a person to support opinions they disbelieve is "sinful and tyrannical," and that civil rights should have no dependence on religious opinion any more than on opinions in physics or geometry. He considered this achievement significant enough to have it listed, alongside authoring the Declaration of Independence, on his own gravestone — he left the presidency off the list.</p>
   <p>Jefferson also famously took a razor to the New Testament, physically cutting out the miracle accounts and the resurrection to leave only Jesus's ethical teaching — a project he called, in private letters, an attempt to separate "diamonds" from a "dunghill" of later additions by what he saw as self-interested clergy. It's worth being precise here: Jefferson was a theist who believed in a rational, non-intervening creator (a position historians call Deism), not a Gnostic in the ancient sense — he had no access to Nag Hammadi, discovered more than a century after his death, and he did not believe the material world was a flawed trap. What he shared with the older suppressed traditions was narrower and more specific: a conviction that institutional religious authority should never again have the power of the state behind it.</p>
+  <p>Jefferson and Madison were not working from a blank slate philosophically, either. Both drew directly on <strong>John Locke's</strong> <em>A Letter Concerning Toleration</em> (1689), written in the wake of England's own religious civil wars, which argued that civil government has no legitimate authority over "the salvation of souls" because belief cannot be compelled by force in any case — a coerced confession is worthless as genuine faith. And the colonies already had a working domestic precedent: Roger Williams's Rhode Island colony, founded in 1636 explicitly on the principle of a "wall of separation" between civil and religious authority (Williams's own phrase, which Jefferson borrowed verbatim in his 1802 letter to the Danbury Baptists), after Williams himself had been banished from Massachusetts Bay for religious dissent. The Founders weren't reasoning about persecution in the abstract — they had a domestic case study a century and a half old.</p>
   <div class="callout">
     <div class="kicker">Worth noting</div>
     <p>Many prominent Founders — Washington, Franklin, Revere, Hancock — were Freemasons, and Enlightenment-era Freemasonry's higher degrees did draw on Hermetic and Kabbalistic symbolism inherited via the Renaissance. But there's a real gap between "used shared esoteric vocabulary" and "secretly practiced ancient Gnosticism," and the historical record supports only the former. It's a case where the more modest claim is also the more interesting one: these were Enlightenment rationalists building civic institutions, using old architectural metaphors, not a hidden mystery cult running the republic.</p>
@@ -486,7 +528,7 @@ footer a{color:var(--patina-dark);}
 </section>
 
 <section class="block" id="debates">
-  <div class="kicker">VI. Where Historians Actually Disagree</div>
+  <div class="kicker">V. Where Historians Actually Disagree</div>
   <h2>Four Live Arguments, Not Four Settled Facts</h2>
   <p>It's worth being specific about what's disputed and by whom, because the disagreements are more informative than a false consensus would be.</p>
 
@@ -501,10 +543,16 @@ footer a{color:var(--patina-dark);}
 
   <h3>Was Jefferson's razor an act of recovery or an act of erasure?</h3>
   <p>The conventional framing treats <em>The Jefferson Bible</em> as Jefferson stripping away later corruption to recover an authentic ethical core — his own words describe it that way. But this is Jefferson's own claim about his own project, not a neutral historical description, and it's worth reading with the same skepticism applied to any other primary source with a stake in its own narrative. A different, less flattering reading is available: Jefferson wasn't recovering anything, he was constructing a Jesus that matched his own Enlightenment ethics and discarding what didn't fit — which is a defensible thing to do as a matter of personal conscience, but a different claim than "finding what was really there."</p>
+
+  <h3>Did Marcion, not the proto-orthodox church, invent the idea of a fixed New Testament canon?</h3>
+  <p>Marcion of Sinope (c. 85–160 CE) proposed the first known defined Christian canon — a purged Luke and ten Pauline letters — while rejecting the Hebrew Bible entirely on the grounds that its creator-god was a lesser, harsher deity than the God revealed by Jesus, a position with real structural overlap with later Gnostic Demiurge theology, though Marcion is usually classified separately from the Gnostics proper. Historian Adolf von Harnack argued in the early 20th century that Marcion's canon forced the proto-orthodox church to respond by finalizing its own canon defensively — meaning the concept of "the Bible" as a bounded list may owe its existence to a theologian the mainstream church excommunicated. This remains debated: more recent scholars like David Trobisch propose earlier or more organic canon formation, and Judith Lieu's <em>Marcion and the Making of a Heretic</em> (2015) is more cautious than Harnack about crediting Marcion as the sole catalyst.</p>
+
+  <h3>How reliable is Irenaeus as a source for what the groups he condemned actually believed?</h3>
+  <p>Nearly everything known about many Gnostic teachers before 1945 came through Irenaeus's <em>Adversus Haereses</em> — a text written explicitly to refute them, not describe them fairly. When the Nag Hammadi texts surfaced, scholars got a rare chance to check a hostile secondary source against primary material, and the results were mixed: Irenaeus's account of Valentinian cosmology turned out to be broadly accurate in outline, per Bentley Layton's textual comparisons, but selectively simplified and rhetorically sharpened in ways that made the system sound more absurd than the primary texts do on their own terms. The lesson generalizes uncomfortably: a hostile source can be factually right about the broad shape of a belief system and still be a distorting lens for understanding it.</p>
 </section>
 
 <section class="block" id="modern">
-  <div class="kicker">VIII. 1945 to Now</div>
+  <div class="kicker">VI. 1945 to Now</div>
   <h2>Recovery, Not Revelation</h2>
   <p>The Nag Hammadi codices sat in scholarly and political limbo for decades after their discovery — antiquities disputes, Cold War-era academic turf wars, and slow translation work delayed full public access until James M. Robinson's complete English edition in 1977. That delay is well documented and mundane: institutional friction, not suppression by decree.</p>
   <p>What followed was a real, open scholarly argument that continues today. Elaine Pagels made the case for the political stakes of the original suppression. Hans Jonas connected ancient Gnostic alienation to 20th-century existentialism. Bentley Layton and Marvin Meyer produced the standard modern translations. None of them claim a single continuous hidden lineage running from ancient Alexandria to the present — the actual scholarly consensus is closer to independent recurrence: societies under enough administrative or imperial strain seem to keep re-arriving at similar anti-institutional, "the visible authority is not the real authority" ideas, without needing a secret chain of transmission to explain why.</p>
@@ -538,33 +586,61 @@ footer a{color:var(--patina-dark);}
 <section class="block" id="sources">
   <div class="kicker">Bibliography</div>
   <h2>Sources</h2>
+  <p class="lede">Organized by what each source is actually being used to support, so the argument stays checkable claim by claim rather than as one undifferentiated pile.</p>
+
+  <h3>Primary Legal &amp; Historical Documents</h3>
+  <div class="sources">
+    <div class="source-item"><span class="src-name">Codex Theodosianus, Book 16</span><span class="src-note">Trans. Clyde Pharr, The Theodosian Code (1952)</span></div>
+    <div class="source-item"><span class="src-name">Collatio Legum Mosaicarum et Romanarum, 15.3</span><span class="src-note">Diocletian's Rescript Against the Manichaeans, 302 CE</span></div>
+    <div class="source-item"><span class="src-name">Irenaeus of Lyons</span><span class="src-note">Adversus Haereses, c. 180 CE — the primary polemical source that named and grouped these movements</span></div>
+    <div class="source-item"><span class="src-name">Fourth Lateran Council</span><span class="src-note">Canons, 1215 CE, esp. Canon 21 on mandatory confession</span></div>
+    <div class="source-item"><span class="src-name">Thomas Jefferson</span><span class="src-note">Virginia Statute for Religious Freedom, 1786</span></div>
+    <div class="source-item"><span class="src-name">James Madison</span><span class="src-note">Memorial and Remonstrance Against Religious Assessments, 1785</span></div>
+    <div class="source-item"><span class="src-name">Thomas Jefferson</span><span class="src-note">The Jefferson Bible (compiled c. 1820); Letter to the Danbury Baptists, 1802</span></div>
+    <div class="source-item"><span class="src-name">John Locke</span><span class="src-note">A Letter Concerning Toleration (1689)</span></div>
+    <div class="source-item"><span class="src-name">Roger Williams</span><span class="src-note">The Bloudy Tenent of Persecution (1644)</span></div>
+  </div>
+
+  <h3>On the Nag Hammadi Texts &amp; Early Christian Pluralism</h3>
   <div class="sources">
     <div class="source-item"><span class="src-name">Walter Bauer</span><span class="src-note">Orthodoxy and Heresy in Earliest Christianity (1934; Eng. trans. 1971)</span></div>
+    <div class="source-item"><span class="src-name">Thomas A. Robinson</span><span class="src-note">The Bauer Thesis Examined (1988)</span></div>
     <div class="source-item"><span class="src-name">Elaine Pagels</span><span class="src-note">The Gnostic Gospels (1979)</span></div>
     <div class="source-item"><span class="src-name">Elaine Pagels</span><span class="src-note">Beyond Belief: The Secret Gospel of Thomas (2003)</span></div>
     <div class="source-item"><span class="src-name">Hans Jonas</span><span class="src-note">The Gnostic Religion (1958)</span></div>
     <div class="source-item"><span class="src-name">Bentley Layton (ed.)</span><span class="src-note">The Gnostic Scriptures (1987)</span></div>
     <div class="source-item"><span class="src-name">James M. Robinson (ed.)</span><span class="src-note">The Nag Hammadi Library in English (1977)</span></div>
     <div class="source-item"><span class="src-name">Marvin Meyer (ed.)</span><span class="src-note">The Nag Hammadi Scriptures (2007)</span></div>
+    <div class="source-item"><span class="src-name">Bart D. Ehrman</span><span class="src-note">Lost Christianities: The Battles for Scripture and the Faiths We Never Knew (2003)</span></div>
+    <div class="source-item"><span class="src-name">Adolf von Harnack</span><span class="src-note">Marcion: Das Evangelium vom fremden Gott (1921; Eng. trans. 1990)</span></div>
+    <div class="source-item"><span class="src-name">Judith Lieu</span><span class="src-note">Marcion and the Making of a Heretic (2015)</span></div>
+    <div class="source-item"><span class="src-name">David Trobisch</span><span class="src-note">The First Edition of the New Testament (2000)</span></div>
+  </div>
+
+  <h3>On the Gospel of Thomas &amp; Its Dating</h3>
+  <div class="sources">
     <div class="source-item"><span class="src-name">Mark Goodacre</span><span class="src-note">Thomas and the Gospels: The Case for Thomas's Familiarity with the Synoptics (2012)</span></div>
     <div class="source-item"><span class="src-name">April DeConick</span><span class="src-note">The Original Gospel of Thomas in Translation (2006)</span></div>
-    <div class="source-item"><span class="src-name">R.I. Moore</span><span class="src-note">The Formation of a Persecuting Society (1987)</span></div>
-    <div class="source-item"><span class="src-name">Malcolm Lambert</span><span class="src-note">The Cathars (1998)</span></div>
-    <div class="source-item"><span class="src-name">Codex Theodosianus, Book 16</span><span class="src-note">Trans. Clyde Pharr, The Theodosian Code (1952)</span></div>
-    <div class="source-item"><span class="src-name">Thomas Jefferson</span><span class="src-note">Virginia Statute for Religious Freedom, 1786</span></div>
-    <div class="source-item"><span class="src-name">James Madison</span><span class="src-note">Memorial and Remonstrance Against Religious Assessments, 1785</span></div>
-    <div class="source-item"><span class="src-name">Thomas Jefferson</span><span class="src-note">The Jefferson Bible (compiled 1820)</span></div>
-    <div class="source-item"><span class="src-name">April DeConick</span><span class="src-note">The Original Gospel of Thomas in Translation: With a Commentary and New English Translation of the Complete Gospel (2006)</span></div>
     <div class="source-item"><span class="src-name">Stephen J. Patterson</span><span class="src-note">The Gospel of Thomas and Jesus (1993)</span></div>
     <div class="source-item"><span class="src-name">Christopher Tuckett</span><span class="src-note">Thomas and the Synoptics, Novum Testamentum 30 (1988)</span></div>
+  </div>
+
+  <h3>On Medieval Dualist Movements</h3>
+  <div class="sources">
+    <div class="source-item"><span class="src-name">R.I. Moore</span><span class="src-note">The Formation of a Persecuting Society (1987)</span></div>
     <div class="source-item"><span class="src-name">R.I. Moore</span><span class="src-note">The War on Heresy: Faith and Power in Medieval Europe (2012)</span></div>
+    <div class="source-item"><span class="src-name">Malcolm Lambert</span><span class="src-note">The Cathars (1998)</span></div>
     <div class="source-item"><span class="src-name">Bernard Hamilton</span><span class="src-note">Wisdom from the East: The Reception by the Cathars of Eastern Dualist Texts (1998)</span></div>
-    <div class="source-item"><span class="src-name">Thomas A. Robinson</span><span class="src-note">The Bauer Thesis Examined (1988)</span></div>
-    <div class="source-item"><span class="src-name">Bart D. Ehrman</span><span class="src-note">Lost Christianities: The Battles for Scripture and the Faiths We Never Knew (2003)</span></div>
+    <div class="source-item"><span class="src-name">Euan Cameron</span><span class="src-note">Waldenses: Rejections of Holy Church in Medieval Europe (2000)</span></div>
+    <div class="source-item"><span class="src-name">Henry Kamen</span><span class="src-note">The Spanish Inquisition: A Historical Revision (1997)</span></div>
+    <div class="source-item"><span class="src-name">Peter Brown</span><span class="src-note">Power and Persuasion in Late Antiquity (1992)</span></div>
+  </div>
+
+  <h3>On the Category of "Gnosticism" Itself</h3>
+  <div class="sources">
     <div class="source-item"><span class="src-name">Karen L. King</span><span class="src-note">What Is Gnosticism? (2003)</span></div>
-    <div class="source-item"><span class="src-name">Alastair H.B. Logan</span><span class="src-note">The Gnostics: Identifying an Early Christian Cult (2006)</span></div>
     <div class="source-item"><span class="src-name">Michael Allen Williams</span><span class="src-note">Rethinking "Gnosticism": An Argument for Dismantling a Dubious Category (1996)</span></div>
-    <div class="source-item"><span class="src-name">Irenaeus of Lyons</span><span class="src-note">Adversus Haereses, c. 180 CE — the primary polemical source that named and grouped these movements</span></div>
+    <div class="source-item"><span class="src-name">Alastair H.B. Logan</span><span class="src-note">The Gnostics: Identifying an Early Christian Cult (2006)</span></div>
   </div>
 </section>
 
@@ -572,7 +648,17 @@ footer a{color:var(--patina-dark);}
 </main>
 
 <div class="meander dim" aria-hidden="true"></div>
-<div class="glyph-divider" aria-hidden="true"><div class="line"></div>◆<div class="line"></div></div>
+<div class="glyph-divider" aria-hidden="true"><div class="line"></div>
+  <svg viewBox="0 0 40 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 4 C20 10 20 16 20 21" stroke-linecap="round"/>
+    <path d="M20 6 C15 6 11 8 8 12" stroke-linecap="round"/>
+    <path d="M20 6 C25 6 29 8 32 12" stroke-linecap="round"/>
+    <path d="M20 11 C16 11 13 13 10 16" stroke-linecap="round"/>
+    <path d="M20 11 C24 11 27 13 30 16" stroke-linecap="round"/>
+    <path d="M20 16 C17 16 15 17 13 19" stroke-linecap="round"/>
+    <path d="M20 16 C23 16 25 17 27 19" stroke-linecap="round"/>
+  </svg>
+<div class="line"></div></div>
 
 <footer>
   Secret Systems &nbsp;·&nbsp; Written and Compiled by Setvin Noether<br>
